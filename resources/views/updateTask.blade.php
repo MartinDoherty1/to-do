@@ -36,6 +36,23 @@
                   
                   <br>
                   <br>
+
+                  <label>Finished: </label>
+                  <div id="radioButtons">
+                     <br>
+                     <div>
+                        <label>Yes: </label>
+                        <input type="radio" name="Completed" value="1" required>
+                     </div>
+                     <br>
+                     <br>
+                     <div>
+                        <label>No: </label>
+                        <input type="radio" name="Completed" value="0">
+                     </div>
+                     <br>
+                     <br>
+                  </div>
                   <input type = 'submit' id="submitBtn"/>
                </div>
             </form>

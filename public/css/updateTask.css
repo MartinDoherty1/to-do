@@ -30,3 +30,9 @@ body
     background-color: greenyellow;
     color: black;
 }
+
+#radioButtons
+{
+    display: flex;
+    flex-flow: column;
+}
