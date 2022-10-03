@@ -5,6 +5,7 @@
   <title>All Tasks</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ asset('/css/viewAllTasks.css') }}">
 
 </head>
 <body>
@@ -16,6 +17,7 @@
       <tr>
         <th>Title</th>
         <th>Info</th>
+        <th>Date</th>
         <th><a href="/insert">Create New Task</a></th>
       </tr>
     </thead>
@@ -24,6 +26,7 @@
       <tr>
       <td>{{ $task->Title }}</td>
       <td>{{ $task->Body }}</td>
+      <td>{{$task->Date}}</td>
       <td> <a href='edit/{{ $task->ID }}'> Edit </a> </td>
       </tr>
     @endforeach

@@ -17,8 +17,9 @@ class InsertData extends Controller
     {
         $Title = $request->input('Title');
         $Body = $request->input('Body');
+        $Date = $request->input('Date');
 
-        $data = array('Title'=>$Title, 'Body'=>$Body);
+        $data = array('Title'=>$Title, 'Body'=>$Body, 'Date'=>$Date);
 
         DB::table('posts')->insert($data);
 
