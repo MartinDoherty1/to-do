@@ -19,7 +19,8 @@ class updateTask extends Controller
     {
         $title = $request->input('Title');
         $body = $request->input('Body');
-        DB::update('update posts set Title = ?, Body = ? where id = ?',[$title,$body,$id]);
+        $finished = $request->input('Completed');
+        DB::update('update posts set Title = ?, Body = ?, Finished = ? where id = ?',[$title,$body,$finished,$id]);
 
         $tasks = DB::select('select * from posts');
 
