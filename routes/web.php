@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\InsertData;
 use App\Http\Controllers\updateTask;
 use App\Http\Controllers\ViewAllTasks;
+use App\Http\Controllers\deleteTask;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,7 @@ Route::get('/viewTasks', [ViewAllTasks::class, 'AllTasks']);
 
 Route::get('edit/{id}',[updateTask::class, 'showTaskToChange']);
 Route::post('edit/{id}',[updateTask::class, 'updateTask']);
+
+Route::get('delete/{id}',[deleteTask::class,'deleteTask']);
 
 
