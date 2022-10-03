@@ -4,6 +4,7 @@
    <head>
       <title>Marty Doc Tasks</title>
       <meta lang="en">
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
    </head>
    
    <body>
@@ -25,6 +26,14 @@
                    <input type = 'text' name = 'Body' 
                       value = '<?php echo$task[0]->Body; ?>'/>
                 </td>
+            </tr>
+
+            <tr>
+               <td>Date</td>
+               <td>
+                  <input type="date" name='Date'
+                     value = '<?php echo$task[0]->Date; ?>' />
+               </td>
             </tr>
 
             <tr>

@@ -20,6 +20,12 @@
     <label>Task Info:</label>
     <input type="text"  placeholder="Task Info:" name="Body">
     <br>
+    <br>
+
+    <label>Date: </label>
+    <input type="date" name="Date"/>
+    <br>
+    <br>
     <button type="submit"  value = "Add student" >Submit</button>
   </form>
 </div>
