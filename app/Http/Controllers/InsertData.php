@@ -23,8 +23,7 @@ class InsertData extends Controller
 
         DB::table('posts')->insert($data);
 
-        $tasks = DB::select('select * from posts');
-        return view('ViewAllTasks',['tasks'=>$tasks]);
+        return redirect()->action([ViewAllTasks::class, 'AllTasks']);
 
 
 

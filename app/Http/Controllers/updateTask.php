@@ -13,7 +13,6 @@ class updateTask extends Controller
     {
         $task = DB::select('select * from posts where ID = ?', [$id]);
         return view('updateTask',['task'=>$task]);
-        
     }
     
     public function updateTask(Request $request, $id)
@@ -23,7 +22,8 @@ class updateTask extends Controller
         DB::update('update posts set Title = ?, Body = ? where id = ?',[$title,$body,$id]);
 
         $tasks = DB::select('select * from posts');
-        return view('ViewAllTasks',['tasks'=>$tasks]);
+
+        return redirect()->action([ViewAllTasks::class, 'AllTasks']);
 
     }
 }

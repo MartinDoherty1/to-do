@@ -2,47 +2,44 @@
 <html>
    
    <head>
-      <title>Marty Doc Tasks</title>
+      <title>Update Task</title>
       <meta lang="en">
-      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/updateTask.css') }}">
    </head>
    
    <body>
-      <form action = "/edit/<?php echo $task[0]->ID; ?>" method = "post">
-         <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
-      
-         <table>
-            <tr>
-               <td>Title</td>
-               <td>
+      <div>
+
+         <div id="topText">
+            <h2>Update Task Info</h2>
+         </div>
+            <form action = "/edit/<?php echo $task[0]->ID; ?>" method = "post" style="width:70%; margin-left:15%;display:flex;justify-content:center;">
+               <div id="formContent">
+                  <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+                  <br>
+                  <br>
+                  <label>Title: </label>
                   <input type = 'text' name = 'Title' 
                      value = '<?php echo$task[0]->Title; ?>'/>
-               </td>
-            </tr>
+                  <br>
+                  <br>
+         
+                  <label>Task Info: </label>
+                     <input type = 'text' name = 'Body' 
+                        value = '<?php echo$task[0]->Body; ?>'/>
+                  <br>
+                  <br>
+   
+                  <label>Date: </label>
+                     <input type="date" name='Date'
+                        value = '<?php echo$task[0]->Date; ?>' />
+                  
+                  <br>
+                  <br>
+                  <input type = 'submit' id="submitBtn"/>
+               </div>
+            </form>
 
-            <tr>
-                <td>Task Info</td>
-                <td>
-                   <input type = 'text' name = 'Body' 
-                      value = '<?php echo$task[0]->Body; ?>'/>
-                </td>
-            </tr>
-
-            <tr>
-               <td>Date</td>
-               <td>
-                  <input type="date" name='Date'
-                     value = '<?php echo$task[0]->Date; ?>' />
-               </td>
-            </tr>
-
-            <tr>
-               <td colspan = '2'>
-                  <input type = 'submit' value = "Update Task" />
-               </td>
-            </tr>
-
-         </table>
-      </form>
+      </div>
    </body>
 </html>

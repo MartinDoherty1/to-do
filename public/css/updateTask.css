@@ -1,0 +1,32 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+#topText{
+    padding: 20px;
+    background-color: blue;
+    color: white;
+}
+
+#formContent{
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+}
+
+#submitBtn{
+    background-color: blue;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: 2px black solid;
+    padding: 10px;
+}
+
+#submitBtn:hover{
+    background-color: greenyellow;
+    color: black;
+}
